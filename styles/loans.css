@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+div.inputs-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+div.inputs-container div.inputs form label {
+  display: block;
+  padding: 10px;
+  position: relative;
+  font-style: italic;
+}
+div.inputs-container div.inputs form label input {
+  width: 40%;
+  padding: 5px;
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+  text-align: center;
+}
+div.inputs-container div.inputs form button {
+  padding: 10px 30px;
+  width: 100%;
+  margin-top: 10px;
+}
+div.inputs-container div.outputs ul {
+  padding-left: 0;
+}
+div.inputs-container div.outputs ul li {
+  padding: 10px;
+  list-style-type: none;
+  font-style: italic;
+  position: relative;
+}
+div.inputs-container div.outputs ul li span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+div.inputs-container div.outputs div.actions {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
