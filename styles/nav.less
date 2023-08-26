@@ -43,3 +43,43 @@ nav{
         }
     }
 }
+
+
+@media (max-width: 707px){
+    nav{
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 50px;
+        width: 100%;
+        z-index: 99;
+    
+        ul{
+            list-style-type: none;
+            display:flex;
+            align-items: center;
+            margin:0;
+            
+
+            li{
+                border-bottom:none;
+                
+                a{
+                    display:inline-block;
+                    width:100%;
+                    text-decoration: underline;
+                    padding:3px;
+                    font-size: smaller;
+                }
+                a:hover{
+                    background-color: #433986;
+                }
+            }
+            #logout{
+                position:unset;
+                width:unset;
+
+            }
+        }
+    }
+}

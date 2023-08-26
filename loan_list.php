@@ -49,11 +49,26 @@
             right:25px;
             top:25px;
         }
-        .details h2{
+        h2.details-header{
             background-color: #6155B4;
             color:white;
             padding:20px;
             border-radius:20px 20px 0 0;
+        }
+
+
+        @media (max-width: 1159px){
+            div.loan-list, div.details{
+                overflow: scroll;
+            }
+        }
+        @media (max-width: 615px){
+            div.loan-list, div.details{
+                font-size:small;
+            }
+            nav{
+                display:none;
+            }
         }
 
     </style>
@@ -123,28 +138,30 @@
                 </label>
             </div>
             
-            
-            <table class="table table-hover" id="myTable">
-                <thead class="table-info">
-                    <tr>
-                        <th>ID</th>
-                        <th>Lender Name</th>
-                        <th>Loan Amount</th>
-                        <th>Scheduled Payment</th>
-                        <th>Scheduled number of Payment</th>
-                        <th>Actual number of Payment</th>
-                        <th>Total early Payment</th>
-                        <th>Total Interest</th>
-                        <th>Process</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="loans">
-                    
-                </tbody>
-            </table>
+            <div class="loan-list">
+                <table class="table table-hover" id="myTable">
+                    <thead class="table-info">
+                        <tr>
+                            <th>ID</th>
+                            <th>Lender Name</th>
+                            <th>Loan Amount</th>
+                            <th>Scheduled Payment</th>
+                            <th>Scheduled number of Payment</th>
+                            <th>Actual number of Payment</th>
+                            <th>Total early Payment</th>
+                            <th>Total Interest</th>
+                            <th>Process</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="loans">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <h2 class="details-header">LOAN DETAILS</h2>
             <div class="details">
-                <h2>LOAN DETAILS</h2>
+                
                 <table class="table">
                     <thead class="table-warning">
                         <tr>

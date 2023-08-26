@@ -62,3 +62,8 @@ div.status div.card div {
 div.status div.card div h2 {
   font-size: 100px;
 }
+@media (max-width: 1020px) {
+  div.totals {
+    grid-template-columns: auto;
+  }
+}
