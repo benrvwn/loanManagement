@@ -16,17 +16,17 @@ session_start();
     <title>Loan Management System</title>
 </head>
 <body>
-    <h1>SIGN IN</h1>
-    <form action="controller/process.php" method="post" class="index border m-auto p-5">
-        <label>
-            Username: <input type="text" name="username" class="form-control">
-        </label>
-        <label>
-            Password: <input type="password" name="password" class="form-control">
-        </label>
-        <input type="submit" value="LOGIN" class="btn btn-primary">
-        
-
+    
+    <form action="controller/process.php" method="post" class="index border">
+        <h1>SIGN IN</h1>
+        <div class="container">
+            <label>
+                Username: <input type="text" name="username" class="form-control">
+            </label>
+            <label>
+                Password: <input type="password" name="password" class="form-control">
+            </label>
+            <input type="submit" value="LOGIN" class="btn btn-primary">
 <?php   if(!empty($_SESSION['error'])){
             foreach($_SESSION['error'] as $message){
 ?>              <?= "<p>{$message}</p>" ?>
@@ -35,6 +35,7 @@ session_start();
             unset($_SESSION['error']);
 }
 ?>
+        </div>
     <a href="register.php">Create an account</a>
     </form>
 </body>

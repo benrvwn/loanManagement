@@ -14,23 +14,7 @@ session_start();
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <title>Document</title>
     <style>
-        a{
-            padding:5px;
-            text-decoration: none;
-            color:gray;
-            font-weight: bolder;
-            margin:auto;
-            display:block;
-            width:200px;
-            text-align:center;
-        }
-        a:hover{
-            color:chocolate;
-        }
-        i{
-            margin-right:5px;
-            font-size: 30px;
-        }
+        
     </style>
     <script>
         $(document).ready(function(){
@@ -47,19 +31,25 @@ session_start();
     </script>
 </head>
 <body>
-    <h1>SIGN UP</h1>
+    
     <form id="register" class="register">
-        <label for="username">Username:</label>
-        <input type="text" class="form-control" name="username" placeholder="Enter username">
-        <label for="password">Password:</label>
-        <input type="password" class="form-control" name="password" placeholder="Enter password">
-        <label for="fname">First Name:</label>
-        <input type="text" class="form-control" name="fname" placeholder="Enter first name">
-        <label for="lname">Last Name:</label>
-        <input type="text" class="form-control" name="lname" placeholder="Enter last name">
-        <input type="submit" value="Register" class="btn btn-success">
-        <div id="messages"></div>
-        <a href="/"><i class="bi bi-box-arrow-left"></i>Back to login</a>
+        <h1>SIGN UP</h1>
+        <div class="container">
+            <label for="username">Username:</label>
+                <input type="text" class="form-control" name="username" placeholder="Enter username">
+            <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password" placeholder="Enter password">
+            <label for="fname">First Name:</label>
+                <input type="text" class="form-control" name="fname" placeholder="Enter first name">
+            <label for="lname">Last Name:</label>
+                <input type="text" class="form-control" name="lname" placeholder="Enter last name">
+            <label for="color">What is your favorite color?</label>
+                <input type="text" class="form-control" name="color" placeholder="Enter your answer">
+            <input type="submit" value="REGISTER" class="btn btn-success">
+            <div id="messages"></div>
+            <a href="/"><i class="bi bi-box-arrow-left"></i>Back to login</a>
+        </div>
+        
     </form>
 </body>
 </html>

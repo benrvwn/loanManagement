@@ -14,6 +14,7 @@
     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);;
     $fName = filter_input(INPUT_POST, "fname", FILTER_SANITIZE_SPECIAL_CHARS);
     $lName = filter_input(INPUT_POST, "lname", FILTER_SANITIZE_SPECIAL_CHARS);
+    $color = filter_input(INPUT_POST, 'color', FILTER_SANITIZE_SPECIAL_CHARS);
 
     $passEncrypt = password_hash($password, PASSWORD_DEFAULT);
 
@@ -21,6 +22,7 @@
     valid($password, "Password");
     valid($fName, "First Name");
     valid($lName, "Last Name");
+    valid($color, "Favorite color");
 
     if(strlen($password) < 8 && strlen($password) != 0){
         $_SESSION['regError'][] = "Password too short.";
@@ -39,7 +41,7 @@
 
 
     if(empty($_SESSION['regError'])){
-        $conn->query("INSERT INTO user(username, password, first_name, last_name, created_at, updated_at)VALUES('{$username}','{$passEncrypt}','{$fName}','{$lName}',now(), now())");
+        $conn->query("INSERT INTO user(username, password, first_name, last_name, fav_color, created_at, updated_at)VALUES('{$username}','{$passEncrypt}','{$fName}','{$lName}', '{$color}',now(), now())");
         echo "<div class='alert alert-success' role='alert'>Registered Successfully.</div>";
     }else{
 

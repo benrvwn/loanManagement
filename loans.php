@@ -27,55 +27,58 @@ session_start();
     <div class="content">
         <div class="container">
             <div class="inputs-container">
-                <div class="inputs p-4">
+                <div class="inputs">
                     <h3>ENTER VALUES</h3>
                     <form id="kanor">
                         <label>
                             Loan Amount:
-                            <input type="text" class="form-control" name="loanAmount">
+                            <input type="number" class="form-control" min="1000" name="loanAmount" required>
                         </label>
                         <label>
                             Annual interest rate:
-                            <input type="number" class="form-control" name="annualInterestRate">
+                            <input type="number" class="form-control" min="0" name="annualInterestRate" required>
                         </label>
                         <label>
                             Loan period in years:
-                            <input type="number" class="form-control" name="loanPeriodYears">
+                            <input type="number" class="form-control" min="1" name="loanPeriodYears" required>
                         </label>
                         <label>
                             Number of payments per year:
-                            <input type="number" class="form-control" name="noPaymentsPerYear">
+                            <input type="number" class="form-control" min="1" max="12" name="noPaymentsPerYear" required>
                         </label>
                         <label>
                             Start date of loan:
-                            <input type="date" class="form-control" name="startDateLoan">
+                            <input type="date" class="form-control" name="startDateLoan" required>
                         </label>
                         <label>
                             Optional extra payments:
-                            <input type="number" class="form-control" name="xtraPayments">
+                            <input type="number" class="form-control" min="10" name="xtraPayments">
                         </label>
                         <label>
                             Lender Full Name:
-                            <input type="text" class="form-control" name="lenderName">
+                            <input type="text" class="form-control" name="lenderName" required>
                         </label>
                         <button id="setSched" class="btn btn-primary">Set Schedule</button>
                     </form>
                     
                 </div>
-                <div class="outputs p-4">
+                <div class="outputs">
                     <h3>LOAN SUMMARY</h3>
-                    <ul class="p-0">
-                        <li>Scheduled payment:<span>haha</span></li>
-                        <li>Scheduled number of payments:<span></span></li>
-                        <li>Actual number of payments:<span></span></li>
-                        <li>Total early payments:<span></span></li>
-                        <li>Total interest:<span></span></li>
-                        <li>Lender name:<span></span></li>
-                    </ul>
-                    <div class="actions">
-                        <button class="btn btn-secondary" id="refresh">Refresh</button>
-                        <button class="btn btn-danger" id="cancel" disabled>Cancel</button>
+                    <div class="output-list">
+                        <ul class="p-0">
+                            <li>Scheduled payment:<span></span></li>
+                            <li>Scheduled number of payments:<span></span></li>
+                            <li>Actual number of payments:<span></span></li>
+                            <li>Total early payments:<span></span></li>
+                            <li>Total interest:<span></span></li>
+                            <li>Lender name:<span></span></li>
+                        </ul>
+                        <div class="actions">
+                            <button class="btn btn-secondary" id="refresh">Refresh</button>
+                            <button class="btn btn-danger" id="cancel" disabled>Cancel</button>
+                        </div>
                     </div>
+                    
                 </div>
                 
             </div>

@@ -10,14 +10,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/pages.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles/pages.css">
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     
     <title>Loan Lists</title>
+    <style>
+        table{
+            box-shadow:
+            0px 0px 9px rgba(0, 0, 0, 0.16);
+        }
+        
+        input{
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--bs-body-color);
+            background-color: var(--bs-body-bg);
+            background-clip: padding-box;
+            border: var(--bs-border-width) solid var(--bs-border-color);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: var(--bs-border-radius);
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+        .header{
+            padding:20px;
+            position:relative;
+            background-color: #6155B4;
+            color:white;
+            border-radius:20px 20px 0 0;
+        }
+        label{
+            position:absolute;
+            right:25px;
+            top:25px;
+        }
+        .details h2{
+            background-color: #6155B4;
+            color:white;
+            padding:20px;
+            border-radius:20px 20px 0 0;
+        }
 
+    </style>
     <script>
         $(document).ready(function(){
             $.ajax({
@@ -77,10 +116,13 @@
     
     <div class="content">
         <div class="container">
-            <h1>LOANS</h1>
-            <label>
-                Search: <input type="text" id="search" class="form-control m-3">
-            </label>
+            <div class="header">
+                <h2>LOANS</h2>
+                <label>
+                    Search: <input type="text" id="search">
+                </label>
+            </div>
+            
             
             <table class="table table-hover" id="myTable">
                 <thead class="table-info">

@@ -5,21 +5,46 @@
 }
 form.index {
   width: 400px;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 100px;
 }
-form.index label {
+form.index h1 {
+  margin: 0;
+  background-color: #6155B4;
+  color: white;
+  padding: 10px;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 30px;
+}
+form.index div.container {
+  padding: 30px;
+}
+form.index div.container label {
   display: block;
   margin-bottom: 15px;
   text-align: center;
 }
-form.index input {
+form.index div.container input {
   display: block;
   width: 100%;
   text-align: center;
+  margin-bottom: 30px;
 }
 form.index a {
   text-align: center;
   display: block;
-  margin-top: 50px;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 30px;
+  color: gray;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px;
+}
+form.index a:hover {
+  color: coral;
 }
 h1 {
   text-align: center;
@@ -27,13 +52,44 @@ h1 {
 }
 form.register {
   width: 480px;
-  padding: 20px;
   margin: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  border: 1px dotted gray;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.16);
 }
-form.register input {
+form.register h1 {
+  background-color: #6155B4;
+  margin: 0;
+  color: white;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 30px;
+}
+form.register div.container {
+  padding: 30px;
+}
+form.register div.container input {
   margin-bottom: 20px;
   text-align: center;
 }
-form.register input[type=submit] {
+form.register div.container input[type=submit] {
   width: 100%;
+}
+form.register div.container a {
+  padding: 5px;
+  text-decoration: none;
+  color: gray;
+  font-weight: bolder;
+  margin: auto;
+  display: block;
+  width: 200px;
+  text-align: center;
+}
+form.register div.container a:hover {
+  color: chocolate;
+}
+form.register div.container i {
+  margin-right: 5px;
+  font-size: 30px;
 }

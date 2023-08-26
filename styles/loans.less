@@ -4,14 +4,31 @@
     margin:0;
 }
 
+h3{
+    background-color: #6155B4;
+    color:white;
+    border-radius: 15px 15px 0 0;
+    padding:20px;
+}
+
+
 div.inputs-container{
     display:grid;
     grid-template-columns: auto auto;
     gap:30px;
 
+
+
     div.inputs{
+        box-shadow:
+    0px 0px 9px rgba(0, 0, 0, 0.16);
+        border-radius: 15px;
         
+        
+
         form{
+            padding:20px;
+
             label{
                 display:block;
                 padding:10px;
@@ -36,28 +53,42 @@ div.inputs-container{
     }
 
     div.outputs{
+        box-shadow:
+        0px 0px 9px rgba(0, 0, 0, 0.16);
+        border-radius: 15px;
 
-        ul{
-            padding-left:0;
+        div.output-list{
+            padding:20px;
 
-            li{
-                padding:10px;
-                list-style-type: none;
-                font-style: italic;
-                position:relative;
-
-                span{
-                    position:absolute;
-                    right:10px;
-                    bottom:10px;
-                }
-            }
+            ul{
+                padding-left:0;
             
-        }
-        div.actions{
-            display:grid;
-            grid-template-columns: auto auto;
-            gap:10px;
-        }
+    
+                li{
+                    padding:10px;
+                    list-style-type: none;
+                    font-style: italic;
+                    position:relative;
+    
+                    span{
+                        position:absolute;
+                        right:10px;
+                        bottom:10px;
+                    }
+                }
+                
+            }
+            div.actions{
+                display:grid;
+                grid-template-columns: auto auto;
+                gap:10px;
+            }
+        }  
     }
+
+}
+div.sched-table{
+    box-shadow:
+    0px 0px 9px rgba(0, 0, 0, 0.16);
+    margin-top:30px;
 }

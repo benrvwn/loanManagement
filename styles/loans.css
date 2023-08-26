@@ -3,10 +3,23 @@
   padding: 0;
   margin: 0;
 }
+h3 {
+  background-color: #6155B4;
+  color: white;
+  border-radius: 15px 15px 0 0;
+  padding: 20px;
+}
 div.inputs-container {
   display: grid;
   grid-template-columns: auto auto;
   gap: 30px;
+}
+div.inputs-container div.inputs {
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.16);
+  border-radius: 15px;
+}
+div.inputs-container div.inputs form {
+  padding: 20px;
 }
 div.inputs-container div.inputs form label {
   display: block;
@@ -27,22 +40,33 @@ div.inputs-container div.inputs form button {
   width: 100%;
   margin-top: 10px;
 }
-div.inputs-container div.outputs ul {
+div.inputs-container div.outputs {
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.16);
+  border-radius: 15px;
+}
+div.inputs-container div.outputs div.output-list {
+  padding: 20px;
+}
+div.inputs-container div.outputs div.output-list ul {
   padding-left: 0;
 }
-div.inputs-container div.outputs ul li {
+div.inputs-container div.outputs div.output-list ul li {
   padding: 10px;
   list-style-type: none;
   font-style: italic;
   position: relative;
 }
-div.inputs-container div.outputs ul li span {
+div.inputs-container div.outputs div.output-list ul li span {
   position: absolute;
   right: 10px;
   bottom: 10px;
 }
-div.inputs-container div.outputs div.actions {
+div.inputs-container div.outputs div.output-list div.actions {
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
+}
+div.sched-table {
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.16);
+  margin-top: 30px;
 }

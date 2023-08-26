@@ -14,15 +14,6 @@
     <title>Dashboard</title>
     <script>
         $(document).ready(function(){
-            // Show loading overlay when the page starts loading
-            $(".loading-overlay").show();
-
-            // Hide loading overlay when the page finishes loading
-            $(window).on("load", function () {
-                $(".loading-overlay").fadeOut("slow");
-            });
-
-
             $.get('dashboard-process.php', function(response){
                 $('#loaned').html(response.total_loaned);
                 $('#num_loans').html(response.numOfloans);
